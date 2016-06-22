@@ -36,7 +36,7 @@ This project has submodules ...
 
 ## Compile Kaldi versions
 
-    It's necessary to change some files and add another ones. Please, follow the these instructions: 
+It's necessary to change some files and add another ones. Please, follow the these instructions: 
 
     cd kaldi-upstream/tools
     awk 'CXX = g++ { print; print "CXXFLAGS += -fPIC -O3 -mcpu=power8 -mtune=power8"; next }1' Makefile
@@ -69,7 +69,7 @@ This project has submodules ...
     index, name
     0, Tesla K40m
 
-   $ /usr/local/cuda/bin/nvcc --version
+    $ /usr/local/cuda/bin/nvcc --version
     
     nvcc: NVIDIA (R) Cuda compiler driver
     Copyright (c) 2005-2015 NVIDIA Corporation
@@ -119,3 +119,5 @@ This project has submodules ...
     Mem:      33460224    7129024   26331200       1408        128      30272
     -/+ buffers/cache:    7098624   26361600
     Swap:      1998784     169408    1829376
+
+As it can be seen, when memcheck.sh started, there were approximately 28.67GB free RAM. When the test ended, there were 26.33GB free RAM. More than 2GB were leaked!
