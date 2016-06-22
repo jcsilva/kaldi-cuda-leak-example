@@ -80,6 +80,7 @@ It's necessary to change some files and add another ones. Please, follow the the
     
     $ ./memcheck.sh | tee output_memcheck
 
+    $ cat output_memcheck
                  total       used       free     shared    buffers     cached
     Mem:      33460224    4783424   28676800       1408        128      31424
     -/+ buffers/cache:    4751872   28708352
